@@ -17,6 +17,8 @@ contract NFT is ERC721URIStorage {
         uint256 price;
         bool currentlyListed;
     }
+    
+receive() external payable {}
 
     mapping(uint256 => ListedToken) private idToListedToken;
     uint256 ListPrice = 0.0001 ether;
