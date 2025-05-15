@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import {ERC721URIStorage, ERC721} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
 
 contract NFT is ERC721URIStorage {
     address public owner;
