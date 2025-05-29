@@ -78,11 +78,11 @@ Inherits from:
 ## 📦 Directory Structure (Suggested)
 
 ```
-nft-marketplace-foundry/
+Nft_Marketplace/
 ├── src/
-│   └── NFT.sol          # main contract
+│   └── NFT_MARKETPLACE.sol          # main contract
 ├── test/
-│   └── NFT.t.sol        # test file
+│   └── NFT_MARKETPLACE.t.sol        # test file
 ├── foundry.toml         # Foundry config
 └── README.md
 ```
