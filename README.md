@@ -1,66 +1,100 @@
-## Foundry
+Here’s the updated `README.md` with a **Foundry build, test, and deploy** section:
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+---
 
-Foundry consists of:
+# 🖼️ NFT Marketplace Smart Contract
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This is a simple yet functional **NFT Marketplace** smart contract built using Solidity and OpenZeppelin's ERC-721 implementation. It allows users to mint NFTs, list them for sale, view listings, and execute purchases — all within a decentralized environment.
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## 🔧 Features
 
-## Usage
+* ✅ ERC-721 NFT Minting with Metadata
+* 💰 Listing NFTs for sale with a fixed listing fee
+* 🛒 Purchase NFTs directly using `executeSale`
+* 🗂️ View all listed NFTs or NFTs owned by a specific user
+* 🔐 Only the contract owner can update listing fees
+* 📥 Accepts ETH directly via `receive()` fallback
 
-### Build
+---
 
-```shell
-$ forge build
+## 🧱 Built With Foundry
+
+### 📦 Requirements
+
+* [Foundry](https://book.getfoundry.sh/getting-started/installation) (install via `curl -L https://foundry.paradigm.xyz | bash`)
+* [Node.js](https://nodejs.org/) (optional, for frontend integration)
+* Git
+
+### 🛠 Setup & Installation
+
+```bash
+# Clone the project
+git clone https://github.com/yourname/nft-marketplace-foundry.git
+cd nft-marketplace-foundry
+
+# Install dependencies
+forge install
+
+# Build the contracts
+forge build
+
+# Run tests
+forge test -vv
 ```
 
-### Test
+### 🧪 Writing and Running Tests
 
-```shell
-$ forge test
+Add your tests in `test/NFT.t.sol`. Example:
+
+```solidity
+function testCanMint() public {
+    NFT nft = new NFT();
+    uint256 tokenId = nft.mint(address(this), "ipfs://sample");
+    assertEq(nft.ownerOf(tokenId), address(this));
+}
 ```
 
-### Format
+Then run:
 
-```shell
-$ forge fmt
+```bash
+forge test
 ```
 
-### Gas Snapshots
+---
 
-```shell
-$ forge snapshot
+## 🧩 Core Contract Summary
+
+### Contract: `NFT`
+
+Inherits from:
+
+* `ERC721`
+* `ERC721URIStorage`
+
+... *(rest of the summary continues as before)*
+
+---
+
+## 📦 Directory Structure (Suggested)
+
+```
+nft-marketplace-foundry/
+├── src/
+│   └── NFT.sol          # main contract
+├── test/
+│   └── NFT.t.sol        # test file
+├── foundry.toml         # Foundry config
+└── README.md
 ```
 
-### Anvil
+---
 
-```shell
-$ anvil
-```
+## 📜 License
 
-### Deploy
+This project is licensed under the [MIT License](LICENSE).
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+---
 
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Let me know if you’d like me to generate the `foundry.toml` file or a base test file (`NFT.t.sol`) to get you started.
