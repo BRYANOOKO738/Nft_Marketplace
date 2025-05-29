@@ -29,8 +29,8 @@ This is a simple yet functional **NFT Marketplace** smart contract built using S
 
 ```bash
 # Clone the project
-git clone https://github.com/yourname/nft-marketplace-foundry.git
-cd nft-marketplace-foundry
+git clone [https://github.com/yourname/nft-marketplace-foundry.git](https://github.com/BRYANOOKO738/Nft_Marketplace.git)
+cd Nft_Marketplace
 
 # Install dependencies
 forge install
@@ -93,6 +93,4 @@ nft-marketplace-foundry/
 
 This project is licensed under the [MIT License](LICENSE).
 
----
 
-Let me know if you’d like me to generate the `foundry.toml` file or a base test file (`NFT.t.sol`) to get you started.
