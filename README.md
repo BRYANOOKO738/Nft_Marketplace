@@ -29,7 +29,7 @@ This is a simple yet functional **NFT Marketplace** smart contract built using S
 
 ```bash
 # Clone the project
-git clone [https://github.com/yourname/nft-marketplace-foundry.git](https://github.com/BRYANOOKO738/Nft_Marketplace.git)
+git clone https://github.com/BRYANOOKO738/Nft_Marketplace.git
 cd Nft_Marketplace
 
 # Install dependencies
