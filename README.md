@@ -1,6 +1,4 @@
-Here’s the updated `README.md` with a **Foundry build, test, and deploy** section:
 
----
 
 # 🖼️ NFT Marketplace Smart Contract
 
